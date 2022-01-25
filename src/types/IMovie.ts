@@ -9,4 +9,12 @@ export interface IMovie {
 export interface IMovies {
   movies: IMovie[]
 }
-export interface IMoviePageList {}
+export interface IMovieDetails {
+  Title: string
+  Runtime: string
+  Type: string
+  Director: string
+  Actors: string
+  imdbRating: string
+  Poster: string
+}
