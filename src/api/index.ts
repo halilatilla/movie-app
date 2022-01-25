@@ -1,1 +1,1 @@
-export { getMovieBySearchText } from './getMovies'
+export { getMovieBySearchText, getMovieById } from './getMovies'
