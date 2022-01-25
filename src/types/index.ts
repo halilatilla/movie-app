@@ -1,1 +1,1 @@
-export type { IMovie, IMovies, IMovieDetails } from './IMovie'
+export type { IMovie, IMovieDetails } from './IMovie'

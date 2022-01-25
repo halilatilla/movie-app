@@ -6,9 +6,6 @@ export interface IMovie {
   imdbID: string
 }
 
-export interface IMovies {
-  movies: IMovie[]
-}
 export interface IMovieDetails {
   Title: string
   Runtime: string
