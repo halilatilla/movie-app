@@ -1,15 +1,12 @@
-# Infinite Scroll with NextJs & ReactQuery
+# Movie App Pagination
 
+### [Demo]()
 
-### [Demo](https://infinte-scroll-nextjs-reactquery.vercel.app)
+### **Nextjs-React-Query-Typescript-Tailwind-Jest**
 
-
-### **Nextjs-Tailwind-Typescript-Jest-React-Query**
-
-![infinite-scroll](https://user-images.githubusercontent.com/27916419/149632380-3b8fd31c-3d0a-4d33-8c69-868b8cabff00.gif)
+![infinite-scroll]()
 
 <br>
-
 
 ## Development
 
@@ -17,10 +14,10 @@ Pull requests are encouraged and always welcome.
 [Pick an issue](https://github.com/halilatilla/path-frontend-challenge/issues)
 and help us out!
 
-To install and work on `https://github.com/halilatilla/path-frontend-challenge`
+To install and work on `https://github.com/halilatilla/movie-app`
 
 ```bash
-git clone https://github.com/halilatilla/path-frontend-challenge
+git clone https://github.com/halilatilla/movie-app
 cd path-frontend-challenge
 npm install or yarn install
 ```
@@ -30,6 +27,7 @@ npm install or yarn install
 ```bash
 yarn dev
 ```
+
 `http://localhost:3000/`
 
 <br>
