@@ -11,7 +11,7 @@ interface Props {
 const MovieCard: FC<Props> = ({ movie }) => {
   return (
     <Link href={`/movie/${movie.imdbID}`}>
-      <a className="group rounded overflow-hidden border bg-gray-700" data-testid="movie-list-card">
+      <a className="group rounded overflow-hidden border bg-gray-700" data-testid="movie-card">
         <div className="h-[200px] relative">
           <Image
             layout="fill"
