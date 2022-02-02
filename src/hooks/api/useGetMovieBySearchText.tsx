@@ -1,19 +1,15 @@
-import { useInfiniteQuery } from 'react-query'
+import { useQuery } from 'react-query'
 
 import { getMovieBySearchText } from '@src/api'
 
-export const useGetMovieBySearchText = ({ initialData, searchText }: any) => {
-  const { data, hasNextPage, fetchNextPage, isError, isFetchingNextPage } = useInfiniteQuery(
-    'getMovieBySearchText',
-    () => getMovieBySearchText(searchText),
+export const useGetMovieBySearchText = ({ searchTerm }: any) => {
+  const { data, isError, isFetching, isLoading } = useQuery(
+    ['getMovieBySearchText', searchTerm],
+    () => getMovieBySearchText({ searchTerm }),
     {
-      initialData,
-      /*   getNextPageParam: ({ total, limit }) => {
-        const nextPage = limit + 30
-        return nextPage <= total ? nextPage : undefined
-      }, */
+      enabled: Boolean(searchTerm),
     },
   )
 
-  return { data, hasNextPage, fetchNextPage, isError, isFetchingNextPage }
+  return { data, isError, isFetching, isLoading }
 }

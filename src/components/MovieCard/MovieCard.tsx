@@ -10,20 +10,29 @@ interface Props {
 
 const MovieCard: FC<Props> = ({ movie }) => {
   return (
-    <Link href={`/movie/${movie.imdbID}`}>
+    <Link href={`/movie/${movie?.imdbID}`}>
       <a className="group rounded overflow-hidden border bg-gray-700" data-testid="movie-card">
-        <div className="h-[200px] relative">
-          <Image
-            layout="fill"
-            placeholder="blur"
-            blurDataURL={BLUR_DATA_URL}
-            className="object-center object-cover transition duration-300 transform  group-hover:scale-110 "
-            src={movie.Poster}
-            alt={movie.Title}
-          />
+        <div className="h-[400px] relative">
+          {movie.Poster !== 'N/A' ? (
+            <Image
+              layout="fill"
+              placeholder="blur"
+              blurDataURL={BLUR_DATA_URL}
+              className="object-center object-cover transition duration-300 transform  group-hover:scale-110 "
+              src={movie?.Poster}
+              alt={movie?.Title}
+            />
+          ) : (
+            <Image
+              layout="fill"
+              className="object-center object-cover transition duration-300 transform  group-hover:scale-110 "
+              src="https://via.placeholder.com/450?text=No+Poster"
+              alt={movie?.Title}
+            />
+          )}
         </div>
-        <p className="font-bold text-center p-2">{movie.Title}</p>
-        <p className="font-bold text-center p-2">{movie.Year}</p>
+        <p className="font-bold text-center p-2">{movie?.Title}</p>
+        <p className="font-bold text-center p-2">{movie?.Year}</p>
       </a>
     </Link>
   )

@@ -13,10 +13,20 @@ const Movie: NextPage<{ movie: IMovieDetails }> = ({ movie }) => {
         <title>Marvel | {movie?.Title} </title>
       </Head>
       <main className="container mx-auto p-3 md:p-6">
-        <p className="">{movie?.Title}</p>
-        <p className="">{movie?.Runtime}</p>
+        <p>{movie?.Title}</p>
+        <p>{movie?.Runtime}</p>
         <div className="h-[600px] max-w-lg mx-auto border rounded relative">
-          <Image layout="fill" placeholder="blur" blurDataURL={BLUR_DATA_URL} src={movie.Poster} alt={movie.Title} />
+          {movie.Poster !== 'N/A' ? (
+            <Image
+              layout="fill"
+              placeholder="blur"
+              blurDataURL={BLUR_DATA_URL}
+              src={movie?.Poster}
+              alt={movie?.Title}
+            />
+          ) : (
+            <Image layout="fill" src="https://via.placeholder.com/450?text=No+Poster" alt={movie?.Title} />
+          )}
         </div>
       </main>
     </>

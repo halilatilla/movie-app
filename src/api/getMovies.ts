@@ -5,7 +5,7 @@ export const getMovieById = async (id: string) => {
   return data
 }
 
-export const getMovieBySearchText = async (searchText: string) => {
-  const { data } = await fetch(`?s=${searchText}`)
+export const getMovieBySearchText = async ({ searchTerm, page }: { searchTerm: string; page?: number }) => {
+  const { data } = await fetch(`?s=${searchTerm}&page=${page}`)
   return data
 }
