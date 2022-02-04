@@ -4,6 +4,7 @@ const initialState = {
   searchTerm: 'pokemon',
   type: 'movie',
   year: '',
+  randomTerm: '',
 }
 
 const searchSlice = createSlice({
@@ -19,8 +20,11 @@ const searchSlice = createSlice({
     setYear: (state, action) => {
       state.year = action.payload
     },
+    setRandomTerm: (state, action) => {
+      state.randomTerm = action.payload
+    },
   },
 })
 
 export default searchSlice.reducer
-export const { setSearchTerm, setType, setYear } = searchSlice.actions
+export const { setSearchTerm, setType, setYear, setRandomTerm } = searchSlice.actions

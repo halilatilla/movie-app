@@ -5,6 +5,11 @@ export const getMovieById = async (id: string) => {
   return data
 }
 
+export const getMovieByTitle = async (title: string) => {
+  const { data } = await fetch(`?t=${title}`)
+  return data
+}
+
 export const getMovieBySearchText = async ({
   searchTerm,
   page,
