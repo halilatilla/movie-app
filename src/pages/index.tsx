@@ -12,14 +12,14 @@ const Home: NextPage = () => {
   const [debouncedType] = useDebounce(type, 500)
   const [debouncedYear] = useDebounce(year, 1000)
 
-  const { data, isError, isLoading } = useGetMovieBySearchText({
+  const { data, isError, isLoading, error } = useGetMovieBySearchText({
     searchTerm: debouncedSearchTerm,
     type: debouncedType,
     y: debouncedYear,
   })
 
   if (isError) {
-    return <div className="text-red-500 font-bold"> Error </div>
+    return <div className="text-red-500 font-bold"> {error} </div>
   }
 
   return (
@@ -30,9 +30,12 @@ const Home: NextPage = () => {
       </Head>
       <main className="container mx-auto p-3 md:p-6 space-y-8">
         <SearchTab />
-
         {isLoading && <Loading loadingText="Searching..." />}
-        {data?.Response === 'True' ? <MovieList movies={data?.Search} /> : !isLoading && <div>There is no movie</div>}
+        {data?.Response === 'True' ? (
+          <MovieList movies={data?.Search} />
+        ) : (
+          !isLoading && <div className="text-center ">There is no movie</div>
+        )}
       </main>
     </>
   )

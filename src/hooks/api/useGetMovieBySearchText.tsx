@@ -3,7 +3,7 @@ import { useQuery } from 'react-query'
 import { getMovieBySearchText } from '@src/api'
 
 export const useGetMovieBySearchText = ({ searchTerm, type, y }: any) => {
-  const { data, isError, isFetching, isLoading } = useQuery(
+  const { data, isError, isFetching, isLoading, error } = useQuery(
     ['getMovieBySearchText', { variables: { searchTerm, type, y } }],
     () => getMovieBySearchText({ searchTerm, type, y }),
     {
@@ -11,5 +11,5 @@ export const useGetMovieBySearchText = ({ searchTerm, type, y }: any) => {
     },
   )
 
-  return { data, isError, isFetching, isLoading }
+  return { data, isError, isFetching, isLoading, error }
 }
