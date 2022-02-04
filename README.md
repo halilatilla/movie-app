@@ -1,4 +1,4 @@
-# Movie App Pagination
+# Movie App
 
 <br>
 
