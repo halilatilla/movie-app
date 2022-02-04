@@ -2,8 +2,10 @@ import React from 'react'
 import { AppProps } from 'next/app'
 import { QueryClient, QueryClientProvider } from 'react-query'
 import { ReactQueryDevtools } from 'react-query/devtools'
+import { Provider } from 'react-redux'
 
 import { NProgress } from '@src/hooks/index'
+import store from '@src/stores/store'
 
 import '@src/styles/tailwind.css'
 
@@ -13,7 +15,9 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       <NProgress />
       <QueryClientProvider client={queryClient}>
-        <Component {...pageProps} />
+        <Provider store={store}>
+          <Component {...pageProps} />
+        </Provider>
         <ReactQueryDevtools initialIsOpen={false} />
       </QueryClientProvider>
     </>
