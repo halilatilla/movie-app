@@ -5,7 +5,17 @@ export const getMovieById = async (id: string) => {
   return data
 }
 
-export const getMovieBySearchText = async ({ searchTerm, page }: { searchTerm: string; page?: number }) => {
-  const { data } = await fetch(`?s=${searchTerm}&page=${page}`)
+export const getMovieBySearchText = async ({
+  searchTerm,
+  page,
+  type = 'movie',
+  y,
+}: {
+  searchTerm: string
+  page?: number
+  type?: 'movie' | 'search' | 'series'
+  y?: number
+}) => {
+  const { data } = await fetch(`?s=${searchTerm}&page=${page}&type=${type}&y=${y}`)
   return data
 }

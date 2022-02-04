@@ -11,8 +11,8 @@ interface Props {
 const MovieCard: FC<Props> = ({ movie }) => {
   return (
     <Link href={`/movie/${movie?.imdbID}`}>
-      <a className="group rounded overflow-hidden border bg-gray-700" data-testid="movie-card">
-        <div className="h-[400px] relative">
+      <a className="group rounded overflow-hidden border bg-gray-700 grid" data-testid="movie-card">
+        <div className="h-[500px] relative">
           {movie.Poster !== 'N/A' ? (
             <Image
               layout="fill"
@@ -31,8 +31,10 @@ const MovieCard: FC<Props> = ({ movie }) => {
             />
           )}
         </div>
-        <p className="font-bold text-center p-2">{movie?.Title}</p>
-        <p className="font-bold text-center p-2">{movie?.Year}</p>
+        <div className="flex-center flex-col max-w-[80%] mx-auto space-y-2 py-2">
+          <div className="font-bold text-center">{movie?.Title}</div>
+          <div className="font-medium text-center">{movie?.Year}</div>
+        </div>
       </a>
     </Link>
   )

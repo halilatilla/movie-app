@@ -2,10 +2,10 @@ import { useQuery } from 'react-query'
 
 import { getMovieBySearchText } from '@src/api'
 
-export const useGetMovieBySearchText = ({ searchTerm }: any) => {
+export const useGetMovieBySearchText = ({ searchTerm, type, y }: any) => {
   const { data, isError, isFetching, isLoading } = useQuery(
-    ['getMovieBySearchText', searchTerm],
-    () => getMovieBySearchText({ searchTerm }),
+    ['getMovieBySearchText', { variables: { searchTerm, type, y } }],
+    () => getMovieBySearchText({ searchTerm, type, y }),
     {
       enabled: Boolean(searchTerm),
     },
