@@ -5,7 +5,7 @@ import { ReactQueryDevtools } from 'react-query/devtools'
 import { Provider } from 'react-redux'
 
 import { NProgress } from '@src/hooks/index'
-import store from '@src/stores/store'
+import store from '@src/store/store'
 
 import '@src/styles/tailwind.css'
 

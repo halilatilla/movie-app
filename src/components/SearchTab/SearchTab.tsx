@@ -1,8 +1,8 @@
 import { FC } from 'react'
 
 import { Input, Select } from '@src/components'
-import { useAppSelector, useAppDispatch } from '@src/stores/store'
-import { setSearchTerm, setYear, setType } from '@src/stores/reducers/searchSlice'
+import { useAppSelector, useAppDispatch } from '@src/store/store'
+import { setSearchTerm, setYear, setType } from '@src/store/reducers/searchSlice'
 
 interface Props {}
 

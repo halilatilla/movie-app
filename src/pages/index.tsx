@@ -4,7 +4,7 @@ import { useDebounce } from 'use-debounce'
 
 import { MovieList, Loading, SearchTab } from '@src/components'
 import { useGetMovieBySearchText } from '@src/hooks'
-import { useAppSelector } from '@src/stores/store'
+import { useAppSelector } from '@src/store/store'
 
 const Home: NextPage = () => {
   const { searchTerm, type, year } = useAppSelector((state) => state.search)
