@@ -2,8 +2,6 @@ import { FC } from 'react'
 import classNames from 'classnames'
 import { motion } from 'framer-motion'
 
-import styles from './Loading.module.css'
-
 interface Props {
   loadingText?: string
   className?: string

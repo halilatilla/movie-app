@@ -15,7 +15,7 @@ const Movie: NextPage<{ movie: IMovieDetails }> = ({ movie }) => {
       <main className="container mx-auto p-3 md:p-6">
         <p>{movie?.Title}</p>
         <p>{movie?.Runtime}</p>
-        <div className="h-[600px] max-w-lg mx-auto border rounded relative">
+        <div className="relative mx-auto h-[600px] max-w-lg rounded border">
           {movie.Poster !== 'N/A' ? (
             <Image
               layout="fill"

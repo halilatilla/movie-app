@@ -9,7 +9,7 @@ interface Props {
 
 const CharacterList: FC<Props> = ({ movies }) => {
   return (
-    <div data-testid="movie-list" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+    <div data-testid="movie-list" className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
       {movies?.map((movie: IMovie, index: number) => (
         <MovieCard key={index} movie={movie} />
       ))}

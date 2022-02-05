@@ -19,7 +19,7 @@ const Home: NextPage = () => {
   })
 
   if (isError) {
-    return <div className="text-red-500 font-bold"> {error} </div>
+    return <div className="font-bold text-red-500"> {error} </div>
   }
 
   return (
@@ -28,7 +28,7 @@ const Home: NextPage = () => {
         <title>Movie App</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <main className="container mx-auto p-3 md:p-6 space-y-8">
+      <main className="container mx-auto space-y-8 p-3 md:p-6">
         <SearchTab />
         {isLoading && <Loading loadingText="Searching..." />}
         {data?.Response === 'True' ? (
