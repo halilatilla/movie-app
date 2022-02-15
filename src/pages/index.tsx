@@ -34,7 +34,17 @@ const Home: NextPage = () => {
         {data?.Response === 'True' ? (
           <MovieList movies={data?.Search} />
         ) : (
-          !isLoading && <div className="text-center ">There is no movie</div>
+          !isLoading && (
+            <div className="text-center ">
+              <img
+                src="https://www.hyperui.dev/photos/confused-travolta.gif"
+                alt="John Travolta confused"
+                className="mx-auto h-64 w-full max-w-md rounded-lg object-cover"
+              />
+
+              <p className="mt-6 text-gray-300">We can't find anything, try searching again.</p>
+            </div>
+          )
         )}
       </main>
     </>
