@@ -1,5 +1,7 @@
 # Movie App
 
+![Screen Shot 2022-02-17 at 09 00 32](https://user-images.githubusercontent.com/27916419/154414901-cd568e23-90ef-466c-9ca3-de5fc0bcd06a.png)
+
 <br>
 
 ## Development
