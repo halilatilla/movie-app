@@ -4,6 +4,19 @@
 
 <br>
 
+
+## 💻 Tech-Stack
+- NextJS 
+- Typescript
+- Redux Toolkit 
+- React Query
+- Framer Motion
+- Tailwindcss
+- Jest - React Testing Library
+
+
+<br>
+
 ## Development
 
 
@@ -23,6 +36,12 @@ yarn dev
 
 `http://localhost:3000/`
 
+
+## Test
+
+```bash
+yarn test
+```
 <br>
 
 ## Authors
